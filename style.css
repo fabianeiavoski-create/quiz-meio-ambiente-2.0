@@ -1,0 +1,64 @@
+:root {
+  --cor-fundo: #01080E;
+  --cor-principal: #0B0D20;
+  --cor-secundaria: #212333;
+  --cor-destaque: #2BDEFD;
+  --cor-texto: #D7F9FF;
+
+  /* Cores para acerto e erro */
+  --cor-acerto: #123d2a;
+  --cor-acerto-destaque: #39ff88;
+
+  --cor-erro: #421b25;
+  --cor-erro-destaque: #ff4d6d;
+}
+
+body {
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.caixa-principal {
+  background-color: var(--cor-principal);
+  width: 90%;
+  text-align: center;
+  padding: 20px;
+
+  /* Permite uma mudança suave de cor */
+  transition: background-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* Quando a pessoa acerta */
+.caixa-principal.acertou {
+  background-color: var(--cor-acerto);
+  box-shadow: 0 0 30px var(--cor-acerto-destaque);
+}
+
+/* Quando a pessoa erra */
+.caixa-principal.errou {
+  background-color: var(--cor-erro);
+  box-shadow: 0 0 30px var(--cor-erro-destaque);
+}
+
+h1 {
+  color: var(--cor-destaque);
+}
+
+button {
+  background-color: var(--cor-principal);
+  color: var(--cor-destaque);
+  border: none;
+  border-radius: 15px;
+  padding: 15px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--cor-destaque);
+  color: var(--cor-secundaria);
+}
